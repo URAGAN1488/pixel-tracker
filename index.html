@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pixel</title></head>
+<body style="margin:0;padding:0;">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" style="width:1px;height:1px;display:block;">
+    <script>
+        // Тихо загружаем реф-ссылку в фоне (fetch HEAD — не CORS, хит засчитается)
+        fetch('https://dark.shopping/?p=78104', {method: 'HEAD', mode: 'no-cors', credentials: 'omit'})
+            .then(() => console.log('Ref tracked')) // Не видно пользователю
+            .catch(() => {}); // Игнор ошибок
+    </script>
+</body>
+</html>
